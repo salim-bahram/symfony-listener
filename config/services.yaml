@@ -27,6 +27,8 @@ services:
     # please note that last definitions always *replace* previous ones
     app.status.status.object:
         class: 'App\Status\Status'
+        arguments:
+            - '@twig'
 
     app.status.status.listener:
         class: 'App\Listener\StatusListener'
